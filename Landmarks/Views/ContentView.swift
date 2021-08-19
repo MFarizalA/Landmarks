@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     let textLandmark = "Monumen Nasional"
-    let textPlace = "Jakarta Pusat"
+    let textPark = "Jakarta Pusat"
     let textProvinsi = "DKI Jakarta"
     var body: some View {
         VStack {
@@ -26,7 +26,7 @@ struct ContentView: View {
                 Text(textLandmark)
                     .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                 HStack {
-                    Text(textPlace)
+                    Text(textPark)
                     Spacer()
                     Text(textProvinsi)
                 }
