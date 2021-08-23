@@ -7,16 +7,27 @@
 
 import SwiftUI
 
-struct LandmarkFlow: View {
+struct LandmarkRow: View {
     var landmark: Landmark
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            landmark.image
+                .resizable()
+                .frame(width: 50, height: 50, alignment: .leading)
+            Text(landmark.name)
+            
+            Spacer()
+        }
     }
 }
 
 struct LandmarkFlow_Previews: PreviewProvider {
     static var previews: some View {
-        LandmarkFlow()
+        Group {
+            LandmarkRow(landmark: landmarks[0])
+            LandmarkRow(landmark: landmarks[1])
+        }
+        .previewLayout(.fixed(width: 300, height: 70))
     }
 }
